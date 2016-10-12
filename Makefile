@@ -88,14 +88,14 @@ PROJECT = ch
 # Imported source files and paths
 CHIBIOS = ../../../..
 # Startup files.
-include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/startup_stm32f4xx.mk
+include $(CHIBIOS)/os/common/startup/ARMCMx/compilers/GCC/mk/startup_stm32f4xx.mk
 # HAL-OSAL files (optional).
 include $(CHIBIOS)/os/hal/hal.mk
 include $(CHIBIOS)/os/hal/ports/STM32/STM32F4xx/platform.mk
-include ST_STM32F4_DISCOVERY_ETHERNET/board.mk
+include $(CHIBIOS)/os/hal/boards/ST_STM32F4_DISCOVERY_ETHERNET/board.mk
 include $(CHIBIOS)/os/hal/osal/rt/osal.mk
 include $(CHIBIOS)/os/rt/rt.mk
-include $(CHIBIOS)/os/rt/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
+include $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC/mk/port_v7m.mk
 include $(CHIBIOS)/test/rt/test.mk
 include $(CHIBIOS)/os/various/lwip_bindings/lwip.mk
 
@@ -215,5 +215,5 @@ ULIBS =
 # End of user defines
 ##############################################################################
 
-RULESPATH = $(CHIBIOS)/os/common/ports/ARMCMx/compilers/GCC
+RULESPATH = $(CHIBIOS)/os/common/startup/ARMCMx/compilers/GCC
 include $(RULESPATH)/rules.mk

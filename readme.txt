@@ -16,6 +16,9 @@ Address: 192.168.1.20 (or any other ip that is free)
 Netmask: 255.255.255.0
 Gateway: 192.168.1.1
 
+Copy the 'ST_STM32F4_DISCOVERY_ETHERNET' folder into your 'os/hal/boards/' directory.
+Don't forget to extract the lwip library in your chibios 'ext' directory.
+
 Echo server is a port of ST appnote from FreeRTOS to ChibiOS.
 
 ** Build Procedure **
